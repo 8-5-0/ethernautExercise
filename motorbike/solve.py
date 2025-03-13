@@ -24,8 +24,8 @@ motorbike_addr = "0x"+Web3.keccak(rlp.encode([bytes.fromhex(level_address[2:]), 
 
 print(engine_addr)
 print(motorbike_addr)
-func = getattr(solver_instance.functions, 'attack')(Web3.to_checksum_address(engine_addr), Web3.to_checksum_address(motorbike_addr))
-tx = func.build_transaction({'nonce': w3.eth.get_transaction_count(player_account.address), 'value': 0, 'gas': 1000000, 'gasPrice': w3.eth.gas_price})
-sign_tx: SignedTransaction = Account.sign_transaction(tx, player_private_key)
-tx_hash = w3.eth.send_raw_transaction(sign_tx.raw_transaction)
+# func = getattr(solver_instance.functions, 'attack')(Web3.to_checksum_address(engine_addr), Web3.to_checksum_address(motorbike_addr))
+# tx = func.build_transaction({'nonce': w3.eth.get_transaction_count(player_account.address), 'value': 0, 'gas': 1000000, 'gasPrice': w3.eth.gas_price})
+# sign_tx: SignedTransaction = Account.sign_transaction(tx, player_private_key)
+# tx_hash = w3.eth.send_raw_transaction(sign_tx.raw_transaction)
 
